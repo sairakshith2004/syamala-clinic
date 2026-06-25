@@ -1,0 +1,7 @@
+# Syamala Hospital
+
+> Gynaecology, fertility, laparoscopic surgery and neonatal care hospital in Lakshmipuram, Nellore, Andhra Pradesh, India.
+
+## Pages
+
+- [Home](/): Overview of services, doctors, and contact information for Syamala Hospital.
