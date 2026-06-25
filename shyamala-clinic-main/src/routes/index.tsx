@@ -240,29 +240,29 @@ function IntroOverlay({ onDone }: { onDone: () => void }) {
   const [phase, setPhase] = useState<"enter" | "exit">("enter");
 
   useEffect(() => {
-    const t1 = setTimeout(() => setPhase("exit"), 2600);
-    const t2 = setTimeout(onDone, 3400);
+    const t1 = setTimeout(() => setPhase("exit"), 1200);
+    const t2 = setTimeout(onDone, 1700);
     return () => { clearTimeout(t1); clearTimeout(t2); };
   }, [onDone]);
 
   return (
     <div
       className="fixed inset-0 z-50 flex items-center justify-center bg-background"
-      style={phase === "exit" ? { animation: "intro-overlay-out 0.6s ease forwards" } : undefined}
+      style={phase === "exit" ? { animation: "intro-overlay-out 0.4s ease forwards" } : undefined}
     >
       <div
         className="flex flex-col items-center gap-6"
         style={phase === "exit"
-          ? { animation: "intro-shrink 0.8s cubic-bezier(0.4,0,0.2,1) forwards" }
+          ? { animation: "intro-shrink 0.5s cubic-bezier(0.4,0,0.2,1) forwards" }
           : undefined}
       >
         <img
           src={logoImg}
           alt=""
           className="h-48 w-48 object-contain"
-          style={{ animation: "intro-logo 2s ease forwards" }}
+          style={{ animation: "intro-logo 1s ease forwards" }}
         />
-        <div className="flex flex-col items-center leading-none" style={{ animation: "intro-left 2s ease forwards" }}>
+        <div className="flex flex-col items-center leading-none" style={{ animation: "intro-left 1s ease forwards" }}>
           <span style={{ fontFamily: '"Cormorant Garamond", serif', color: '#1B3460', fontSize: '2.8rem', fontWeight: 600, letterSpacing: '0.14em', fontVariant: 'small-caps', lineHeight: 1 }}>Syamala</span>
           <span style={{ fontFamily: '"Cormorant Garamond", serif', color: '#1B3460', fontSize: '1.6rem', fontWeight: 500, letterSpacing: '0.24em', fontVariant: 'small-caps', lineHeight: 1.4 }}>Hospital</span>
           <div style={{ borderTop: '1px solid #1B3460', marginTop: '5px', paddingTop: '5px', width: '100%', textAlign: 'center' }}>
