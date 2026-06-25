@@ -1,8 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState, type ReactNode } from "react";
-import syamala from "@/assets/syamala.png.asset.json";
-import anusha from "@/assets/anusha.jpg.asset.json";
-import rahul from "@/assets/rahul.jpg.asset.json";
 import logoImg from "@/assets/Logo.png";
 import buildingImg from "@/assets/building.jpg";
 import syamalaImg from "@/assets/Syamala_Devi.jpg";
@@ -12,70 +8,6 @@ import baby1 from "@/assets/newborn.jpeg";
 import baby2 from "@/assets/nurse.jpeg";
 import entranceImg from "@/assets/hosp_entrance.jpeg";
 import lapImg from "@/assets/laparoscopic.jpeg";
-import building from "@/assets/building.json";
-import entrance from "@/assets/entrance.json";
-import surgery from "@/assets/surgery.json";
-import baby1json from "@/assets/baby1.json";
-import baby2json from "@/assets/baby2.json";
-
-export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Syamala Hospital — Gynaecology & Fertility, Nellore" },
-      {
-        name: "description",
-        content:
-          "Syamala Hospital, Nellore: trusted gynaecology, laparoscopy, fertility & neonatal care led by Dr. Syamala Devi, Dr. Anusha & Dr. Sunil Rahul.",
-      },
-      { property: "og:title", content: "Syamala Hospital — Nellore" },
-      {
-        property: "og:description",
-        content:
-          "Trusted women's & newborn care in Lakshmipuram, Nellore. Gynaecology, laparoscopy, fertility and neonatology under one roof.",
-      },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://syamalahospital.com/" },
-      { property: "og:image", content: building.url },
-      { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:image", content: building.url },
-    ],
-    links: [
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap",
-      },
-      { rel: "canonical", href: "https://syamalahospital.com/" },
-    ],
-    scripts: [
-      {
-        type: "application/ld+json",
-        children: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Hospital",
-          name: "Syamala Hospital",
-          url: "https://syamalahospital.com/",
-          telephone: "+919676198158",
-          address: {
-            "@type": "PostalAddress",
-            streetAddress: "Lakshmipuram",
-            addressLocality: "Nellore",
-            addressRegion: "Andhra Pradesh",
-            postalCode: "524002",
-            addressCountry: "IN",
-          },
-          openingHours: "Mo-Su 00:00-23:59",
-          medicalSpecialty: ["Gynecology", "Obstetrics", "Neonatology"],
-          employee: [
-            { "@type": "Physician", name: "Dr. N. Syamala Devi", medicalSpecialty: "Gynecology" },
-            { "@type": "Physician", name: "Dr. M. Anusha", medicalSpecialty: "Obstetrics" },
-            { "@type": "Physician", name: "Dr. Ch. Sunil Rahul", medicalSpecialty: "Neonatology" },
-          ],
-        }),
-      },
-    ],
-  }),
-  component: Index,
-});
 
 const doctors = [
   {
@@ -659,3 +591,5 @@ function Index() {
     </div>
   );
 }
+
+export default Index;
