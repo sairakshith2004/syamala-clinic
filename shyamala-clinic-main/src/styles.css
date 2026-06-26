@@ -1,22 +1,5 @@
 @import "tailwindcss" source(none);
 @source "../src";
-@import "tw-animate-css";
-
-@custom-variant dark (&:is(.dark *));
-
-/*
- * Design system definition.
- *
- * The @theme inline block maps CSS custom properties to Tailwind utility
- * classes (e.g. --color-primary -> bg-primary, text-primary).
- *
- * The :root and .dark blocks define the actual color values using oklch.
- * All colors MUST use oklch format.
- *
- * To add a new semantic color:
- * 1. Add the variable to :root (light value) and .dark (dark value)
- * 2. Register it in @theme inline as --color-<name>: var(--<name>)
- */
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
@@ -63,21 +46,19 @@
 
 :root {
   --radius: 0.75rem;
-  /* Poster-inspired pastel palette — blush cream, rose pink, lavender and soft teal */
   --background: oklch(0.985 0.008 350);
   --foreground: oklch(0.32 0.02 300);
   --card: oklch(1 0.002 350);
   --card-foreground: oklch(0.32 0.02 300);
   --popover: oklch(1 0.002 350);
   --popover-foreground: oklch(0.32 0.02 300);
-  /* Rich rose pink — matching the poster hearts and accents */
   --primary: oklch(0.68 0.14 15);
   --primary-foreground: oklch(0.985 0.005 15);
   --secondary: oklch(0.96 0.012 300);
   --secondary-foreground: oklch(0.38 0.02 300);
   --muted: oklch(0.965 0.007 300);
-  --muted-foreground: oklch(0.55 0.015 300);
-  /* Soft lavender accent — matching poster heading tones */
+  /* Darkened from 0.55 → 0.46 for WCAG AA contrast on light background */
+  --muted-foreground: oklch(0.46 0.015 300);
   --accent: oklch(0.65 0.11 300);
   --accent-foreground: oklch(0.985 0.005 300);
   --destructive: oklch(0.65 0.18 25);
@@ -101,9 +82,7 @@
 
   --font-serif: "Cormorant Garamond", "Times New Roman", serif;
   --font-sans: "Inter", system-ui, sans-serif;
-  --font-charm: "Charm", cursive;
 
-  /* Glassmorphism tokens — poster-inspired pastel tints */
   --glass-bg: color-mix(in oklab, oklch(0.99 0.01 350) 48%, transparent);
   --glass-bg-strong: color-mix(in oklab, oklch(0.99 0.01 350) 50%, transparent);
   --glass-bg-rose: color-mix(in oklab, oklch(0.9 0.08 15) 35%, transparent);
@@ -115,42 +94,6 @@
   --glass-bg-blush: color-mix(in oklab, oklch(0.93 0.05 350) 40%, transparent);
   --glass-border: color-mix(in oklab, oklch(0.99 0.008 350) 75%, transparent);
   --glass-shadow: 0 12px 40px -10px color-mix(in oklab, oklch(0.7 0.04 300) 18%, transparent);
-}
-
-
-.dark {
-  --background: oklch(0.129 0.042 264.695);
-  --foreground: oklch(0.984 0.003 247.858);
-  --card: oklch(0.208 0.042 265.755);
-  --card-foreground: oklch(0.984 0.003 247.858);
-  --popover: oklch(0.208 0.042 265.755);
-  --popover-foreground: oklch(0.984 0.003 247.858);
-  --primary: oklch(0.929 0.013 255.508);
-  --primary-foreground: oklch(0.208 0.042 265.755);
-  --secondary: oklch(0.279 0.041 260.031);
-  --secondary-foreground: oklch(0.984 0.003 247.858);
-  --muted: oklch(0.279 0.041 260.031);
-  --muted-foreground: oklch(0.704 0.04 256.788);
-  --accent: oklch(0.279 0.041 260.031);
-  --accent-foreground: oklch(0.984 0.003 247.858);
-  --destructive: oklch(0.704 0.191 22.216);
-  --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.551 0.027 264.364);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.208 0.042 265.755);
-  --sidebar-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-accent: oklch(0.279 0.041 260.031);
-  --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.551 0.027 264.364);
 }
 
 @layer base {
@@ -265,6 +208,13 @@
   box-shadow: var(--glass-shadow);
 }
 
+@utility glass-blush {
+  background: var(--glass-bg-blush);
+  backdrop-filter: blur(20px) saturate(170%);
+  border: 1px solid color-mix(in oklab, oklch(0.88 0.05 350) 35%, transparent);
+  box-shadow: var(--glass-shadow);
+}
+
 @keyframes reveal-up {
   from { opacity: 0; transform: translateY(28px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -285,12 +235,6 @@
   75%  { opacity: 1; transform: translateX(0); }
   100% { opacity: 1; transform: translateX(0); }
 }
-@keyframes intro-right {
-  0%   { opacity: 0; transform: translateX(120px); }
-  45%  { opacity: 0; transform: translateX(120px); }
-  75%  { opacity: 1; transform: translateX(0); }
-  100% { opacity: 1; transform: translateX(0); }
-}
 @keyframes intro-shrink {
   0%   { opacity: 1; transform: scale(1) translateY(0); }
   100% { opacity: 0; transform: scale(0.35) translateY(-260px); }
@@ -298,11 +242,4 @@
 @keyframes intro-overlay-out {
   0%   { opacity: 1; }
   100% { opacity: 0; }
-}
-
-@utility glass-blush {
-  background: var(--glass-bg-blush);
-  backdrop-filter: blur(20px) saturate(170%);
-  border: 1px solid color-mix(in oklab, oklch(0.88 0.05 350) 35%, transparent);
-  box-shadow: var(--glass-shadow);
 }
