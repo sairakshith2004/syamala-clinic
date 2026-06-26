@@ -20,11 +20,19 @@
     <!-- Preconnect to Google Fonts to avoid render-blocking DNS lookup -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <!-- Load only weights actually used: Cormorant Garamond 400/500/600, Inter 400/500/600 -->
+    <!-- Non-blocking font load: preload as style, swap rel on load -->
     <link
-      rel="stylesheet"
+      rel="preload"
+      as="style"
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap"
+      />
+    </noscript>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
