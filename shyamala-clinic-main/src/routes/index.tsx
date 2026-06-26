@@ -263,7 +263,7 @@ function Index() {
             </nav>
             <a
               href="tel:+919676198158"
-              className="shrink-0 rounded-full border border-border bg-card px-4 py-2 text-xs tracking-wider uppercase text-foreground shadow-sm transition hover:bg-secondary sm:px-5"
+              className="shrink-0 inline-flex min-h-[48px] items-center rounded-full border border-border bg-card px-4 py-2 text-xs tracking-wider uppercase text-foreground shadow-sm transition hover:bg-secondary sm:px-5"
             >
               Call Clinic
             </a>
@@ -301,7 +301,7 @@ function Index() {
                 </a>
                 <a
                   href="#doctors"
-                  className="text-sm tracking-wider uppercase text-muted-foreground underline-offset-8 hover:text-foreground hover:underline"
+                  className="inline-flex items-center py-3 text-sm tracking-wider uppercase text-muted-foreground underline-offset-8 hover:text-foreground hover:underline"
                 >
                   Meet the doctors
                 </a>
@@ -421,7 +421,7 @@ function Index() {
                     )}
                     <a
                       href={`mailto:shyamalahospital35@gmail.com?subject=Query%20regarding%20${encodeURIComponent(d.name)}`}
-                      className="mt-4 inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-xs tracking-wider uppercase text-primary transition hover:bg-primary/20"
+                      className="mt-4 inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-3 text-xs tracking-wider uppercase text-primary transition hover:bg-primary/20"
                     >
                       Send Query
                       <span aria-hidden="true">→</span>
@@ -587,7 +587,7 @@ function Index() {
                   href="https://www.google.com/maps/search/?api=1&query=Syamala+Hospital+Stonehousepet+Nellore"
                   target="_blank"
                   rel="noreferrer"
-                  className="glass-rose inline-flex items-center gap-3 rounded-full px-6 py-3 text-xs tracking-wider uppercase text-foreground transition hover:scale-[1.02]"
+                  className="glass-rose inline-flex min-h-[48px] items-center gap-3 rounded-full px-6 py-3 text-xs tracking-wider uppercase text-foreground transition hover:scale-[1.02]"
                 >
                   Get Directions <span aria-hidden="true">→</span>
                 </a>
