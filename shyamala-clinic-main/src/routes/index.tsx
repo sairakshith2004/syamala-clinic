@@ -176,7 +176,7 @@ function IntroOverlay({ onDone }: { onDone: () => void }) {
 
   useEffect(() => {
     const t1 = setTimeout(() => setPhase("exit"), 600);
-    const t2 = setTimeout(onDone, 1000);
+    const t2 = setTimeout(onDone, 1300);
     return () => { clearTimeout(t1); clearTimeout(t2); };
   }, [onDone]);
 
@@ -184,12 +184,12 @@ function IntroOverlay({ onDone }: { onDone: () => void }) {
     <div
       aria-hidden="true"
       className="fixed inset-0 z-50 flex items-center justify-center bg-background"
-      style={phase === "exit" ? { animation: "intro-overlay-out 0.4s ease forwards" } : undefined}
+      style={phase === "exit" ? { animation: "intro-overlay-out 0.7s ease forwards" } : undefined}
     >
       <div
         className="flex flex-col items-center gap-6"
         style={phase === "exit"
-          ? { animation: "intro-shrink 0.5s cubic-bezier(0.4,0,0.2,1) forwards" }
+          ? { animation: "intro-shrink 0.7s cubic-bezier(0.4,0,0.2,1) forwards" }
           : undefined}
       >
         <img
