@@ -247,7 +247,7 @@ function Index() {
                 <span style={{ fontFamily: '"Cormorant Garamond", serif', color: '#1B3460', fontSize: scrolled ? '1.3rem' : '2.6rem', fontWeight: 600, letterSpacing: '0.14em', fontVariant: 'small-caps', lineHeight: 1, transition: 'font-size 0.4s ease' }}>Syamala</span>
                 <span style={{ fontFamily: '"Cormorant Garamond", serif', color: '#1B3460', fontSize: scrolled ? '0.8rem' : '1.55rem', fontWeight: 500, letterSpacing: '0.24em', fontVariant: 'small-caps', lineHeight: 1.4, transition: 'font-size 0.4s ease' }}>Hospital</span>
                 <div style={{ borderTop: '1px solid #1B3460', marginTop: '4px', paddingTop: '4px', width: '100%', maxHeight: scrolled ? '0' : '2rem', opacity: scrolled ? 0 : 1, overflow: 'hidden', transition: 'max-height 0.4s ease, opacity 0.3s ease' }}>
-                  <span style={{ fontFamily: '"Cormorant Garamond", serif', color: '#1B3460', fontSize: '0.65rem', letterSpacing: '0.08em' }}>Compassion + Care - Excellence</span>
+                  <span style={{ fontFamily: '"Cormorant Garamond", serif', color: '#1B3460', fontSize: '0.75rem', letterSpacing: '0.08em' }}>Compassion + Care - Excellence</span>
                 </div>
               </div>
             </div>
@@ -294,14 +294,14 @@ function Index() {
               <div className="mt-10 flex flex-wrap items-center gap-4">
                 <a
                   href="tel:+919676198158"
-                  className="glass-rose inline-flex items-center gap-3 rounded-full px-6 py-3 text-sm tracking-wider uppercase text-foreground transition hover:scale-[1.02]"
+                  className="glass-rose inline-flex min-h-[48px] items-center gap-3 rounded-full px-6 py-3 text-sm tracking-wider uppercase text-foreground transition hover:scale-[1.02]"
                 >
                   Book an Appointment
                   <span aria-hidden="true">→</span>
                 </a>
                 <a
                   href="#doctors"
-                  className="inline-flex items-center py-3 text-sm tracking-wider uppercase text-muted-foreground underline-offset-8 hover:text-foreground hover:underline"
+                  className="inline-flex min-h-[48px] items-center py-3 text-sm tracking-wider uppercase text-muted-foreground underline-offset-8 hover:text-foreground hover:underline"
                 >
                   Meet the doctors
                 </a>
@@ -421,7 +421,7 @@ function Index() {
                     )}
                     <a
                       href={`mailto:shyamalahospital35@gmail.com?subject=Query%20regarding%20${encodeURIComponent(d.name)}`}
-                      className="mt-4 inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-3 text-xs tracking-wider uppercase text-primary transition hover:bg-primary/20"
+                      className="mt-4 inline-flex min-h-[48px] items-center gap-2 rounded-full bg-primary/10 px-4 py-3 text-xs tracking-wider uppercase text-primary transition hover:bg-primary/20"
                     >
                       Send Query
                       <span aria-hidden="true">→</span>
@@ -625,14 +625,14 @@ function Index() {
               <div className="mt-8 flex flex-wrap justify-center gap-4">
                 <a
                   href="tel:+919676198158"
-                  className="glass inline-flex items-center gap-3 rounded-full px-6 py-3 text-sm tracking-wider uppercase text-foreground transition hover:scale-[1.02]"
+                  className="glass inline-flex min-h-[48px] items-center gap-3 rounded-full px-6 py-3 text-sm tracking-wider uppercase text-foreground transition hover:scale-[1.02]"
                 >
                   Book an Appointment
                   <span aria-hidden="true">→</span>
                 </a>
                 <a
                   href="mailto:shyamalahospital35@gmail.com"
-                  className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-5 py-3 text-xs tracking-wider uppercase text-primary transition hover:bg-primary/20"
+                  className="inline-flex min-h-[48px] items-center gap-2 rounded-full bg-primary/10 px-5 py-3 text-xs tracking-wider uppercase text-primary transition hover:bg-primary/20"
                 >
                   Email Us
                   <span aria-hidden="true">→</span>
