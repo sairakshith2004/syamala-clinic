@@ -391,7 +391,7 @@ function Index() {
                   <p className="mt-1 text-xs tracking-wider uppercase text-muted-foreground/70">{d.reg}</p>
                 )}
                 <a
-                  href={`mailto:Syamalahospital35@gmail.com?subject=Query%20regarding%20${encodeURIComponent(d.name)}`}
+                  href={`mailto:shyamalahospital35@gmail.com?subject=Query%20regarding%20${encodeURIComponent(d.name)}`}
                   className="mt-4 inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-xs tracking-wider uppercase text-primary transition hover:bg-primary/20"
                 >
                   Send Query
@@ -509,8 +509,8 @@ function Index() {
               </div>
               <div>
                 <p className="eyebrow !text-muted-foreground">Email</p>
-                <a href="mailto:Syamalahospital35@gmail.com" className="mt-3 block font-serif text-xl transition hover:opacity-70 break-all">
-                  Syamalahospital35@gmail.com
+                <a href="mailto:shyamalahospital35@gmail.com" className="mt-3 block font-serif text-xl transition hover:opacity-70 break-all">
+                  shyamalahospital35@gmail.com
                 </a>
               </div>
               <div>
@@ -571,7 +571,7 @@ function Index() {
               <span aria-hidden>→</span>
             </a>
             <a
-              href="mailto:Syamalahospital35@gmail.com"
+              href="mailto:shyamalahospital35@gmail.com"
               className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-5 py-3 text-xs tracking-wider uppercase text-primary transition hover:bg-primary/20"
             >
               Email Us
