@@ -583,14 +583,24 @@ function Index() {
                     ))}
                   </dl>
                 </div>
-                <a
-                  href="https://www.google.com/maps/search/?api=1&query=Syamala+Hospital+Stonehousepet+Nellore"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="glass-rose inline-flex min-h-[48px] items-center gap-3 rounded-full px-6 py-3 text-xs tracking-wider uppercase text-foreground transition hover:scale-[1.02]"
-                >
-                  Get Directions <span aria-hidden="true">→</span>
-                </a>
+                <div className="flex flex-wrap gap-3">
+                  <a
+                    href="https://www.google.com/maps/search/?api=1&query=Syamala+Hospital+Stonehousepet+Nellore"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="glass-rose inline-flex min-h-[48px] items-center gap-3 rounded-full px-6 py-3 text-xs tracking-wider uppercase text-foreground transition hover:scale-[1.02]"
+                  >
+                    Get Directions <span aria-hidden="true">→</span>
+                  </a>
+                  <a
+                    href="https://www.google.com/maps/search/?api=1&query=Syamala+Hospital+Stonehousepet+Nellore"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex min-h-[48px] items-center gap-2 rounded-full bg-primary/10 px-6 py-3 text-xs tracking-wider uppercase text-primary transition hover:bg-primary/20"
+                  >
+                    ★ Review on Google
+                  </a>
+                </div>
               </div>
             </Reveal>
 
@@ -647,6 +657,14 @@ function Index() {
       <footer className="mt-8 border-t border-white/40">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-6 px-6 py-10 text-xs tracking-wider uppercase text-muted-foreground">
           <p>© {new Date().getFullYear()} Syamala Hospital · Nellore</p>
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=Syamala+Hospital+Stonehousepet+Nellore"
+            target="_blank"
+            rel="noreferrer"
+            className="transition hover:text-foreground"
+          >
+            ★ Review us on Google
+          </a>
           <p>Care that begins with listening.</p>
         </div>
       </footer>
