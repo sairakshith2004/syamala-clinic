@@ -480,10 +480,15 @@ function Index() {
                   Families who trusted us with theirs.
                 </h2>
               </div>
-              <div className="glass flex items-center gap-3 rounded-full px-5 py-2 text-sm text-muted-foreground">
+              <a
+                href="https://www.google.com/search?q=Syamala+Hospital+Nellore+reviews"
+                target="_blank"
+                rel="noreferrer"
+                className="glass flex items-center gap-3 rounded-full px-5 py-2 text-sm text-muted-foreground transition hover:text-foreground"
+              >
                 <span className="font-serif text-2xl text-foreground">4.9</span>
-                <span>★★★★★ · verified Google reviews</span>
-              </div>
+                <span>★★★★★ · verified Google reviews ↗</span>
+              </a>
             </Reveal>
             <div className="mt-16 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
               {reviews.map((r, i) => (
@@ -499,6 +504,16 @@ function Index() {
                 </Reveal>
               ))}
             </div>
+            <Reveal className="mt-12 flex justify-center">
+              <a
+                href="https://www.google.com/search?q=Syamala+Hospital+Nellore+reviews"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex min-h-[48px] items-center gap-2 rounded-full bg-primary/10 px-8 py-3 text-sm tracking-wider uppercase text-primary transition hover:bg-primary/20"
+              >
+                ★ Write a Review on Google
+              </a>
+            </Reveal>
           </div>
         </section>
 
@@ -593,7 +608,7 @@ function Index() {
                     Get Directions <span aria-hidden="true">→</span>
                   </a>
                   <a
-                    href="https://www.google.com/maps/search/?api=1&query=Syamala+Hospital+Stonehousepet+Nellore"
+                    href="https://www.google.com/search?q=Syamala+Hospital+Nellore+reviews"
                     target="_blank"
                     rel="noreferrer"
                     className="inline-flex min-h-[48px] items-center gap-2 rounded-full bg-primary/10 px-6 py-3 text-xs tracking-wider uppercase text-primary transition hover:bg-primary/20"
@@ -658,7 +673,7 @@ function Index() {
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-6 px-6 py-10 text-xs tracking-wider uppercase text-muted-foreground">
           <p>© {new Date().getFullYear()} Syamala Hospital · Nellore</p>
           <a
-            href="https://www.google.com/maps/search/?api=1&query=Syamala+Hospital+Stonehousepet+Nellore"
+            href="https://www.google.com/search?q=Syamala+Hospital+Nellore+reviews"
             target="_blank"
             rel="noreferrer"
             className="transition hover:text-foreground"
