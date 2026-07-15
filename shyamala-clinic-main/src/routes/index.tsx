@@ -222,6 +222,18 @@ function Index() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Deep-linked hash (e.g. from the review QR code) targets a section that
+  // doesn't exist in the DOM until React renders, so the browser's built-in
+  // anchor scroll fires too early and never retries. Do it ourselves once
+  // the intro overlay clears the way.
+  useEffect(() => {
+    if (!introDone) return;
+    const hash = window.location.hash;
+    if (!hash) return;
+    const target = document.querySelector(hash);
+    target?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, [introDone]);
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       {!introDone && <IntroOverlay onDone={() => setIntroDown(true)} />}
@@ -340,7 +352,7 @@ function Index() {
         </section>
 
         {/* ABOUT */}
-        <section id="about" className="mx-auto max-w-6xl px-6 py-24 md:py-32">
+        <section id="about" className="mx-auto max-w-6xl scroll-mt-24 px-6 py-24 md:py-32">
           <div className="grid grid-cols-1 gap-16 md:grid-cols-12">
             <Reveal className="md:col-span-5">
               <p className="eyebrow text-2xl tracking-tight">About the hospital</p>
@@ -385,7 +397,7 @@ function Index() {
         </section>
 
         {/* DOCTORS */}
-        <section id="doctors" className="relative">
+        <section id="doctors" className="relative scroll-mt-24">
           <div className="mx-auto max-w-6xl px-6 py-24 md:py-32">
             <Reveal className="flex items-end justify-between">
               <div>
@@ -434,7 +446,7 @@ function Index() {
         </section>
 
         {/* SERVICES */}
-        <section id="services" className="mx-auto max-w-6xl px-6 py-24 md:py-32">
+        <section id="services" className="mx-auto max-w-6xl scroll-mt-24 px-6 py-24 md:py-32">
           <div className="grid grid-cols-1 gap-12 md:grid-cols-12">
             <Reveal className="md:col-span-4">
               <p className="eyebrow text-2xl tracking-tight">Services</p>
@@ -471,7 +483,7 @@ function Index() {
         </section>
 
         {/* REVIEWS */}
-        <section id="reviews" className="relative">
+        <section id="reviews" className="relative scroll-mt-24">
           <div className="mx-auto max-w-6xl px-6 py-24 md:py-32">
             <Reveal className="flex flex-wrap items-end justify-between gap-6">
               <div>
@@ -558,7 +570,7 @@ function Index() {
         </section>
 
         {/* VISIT / CONTACT */}
-        <section id="visit" className="relative">
+        <section id="visit" className="relative scroll-mt-24">
           <div className="mx-auto grid max-w-6xl grid-cols-1 gap-16 px-6 py-24 md:grid-cols-12 md:py-32">
             <Reveal className="md:col-span-5">
               <p className="eyebrow text-2xl tracking-tight">Visit us</p>
